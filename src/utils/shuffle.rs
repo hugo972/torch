@@ -23,7 +23,7 @@ where
             Some(ref mut items) => items,
         };
 
-        if items.len() == 0 {
+        if items.is_empty() {
             None
         } else {
             Some(items.swap_remove(rand::rng().random_range(..items.len())))
